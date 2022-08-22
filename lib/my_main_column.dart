@@ -53,7 +53,6 @@ class _my_main_coloumnState extends State<my_main_coloumn> {
                   style: TextStyle(color: Color.fromRGBO(47, 240, 36, 1))),
               onPressed: () {
                 myList.add(widget._myController.text);
-                SecondPage(widget.myList);
                 setState(() {});
               }),
         NumPad(
@@ -71,7 +70,6 @@ class _my_main_coloumnState extends State<my_main_coloumn> {
           children: [
             IconButton(
               onPressed: (){
-                myList.add(widget._myController.text);
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => SecondPage(myList)),
