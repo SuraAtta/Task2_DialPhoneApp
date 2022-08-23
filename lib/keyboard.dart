@@ -11,14 +11,12 @@ class NumPad extends StatefulWidget {
   final Color buttonColor;
   final Color iconColor;
   final TextEditingController controller;
-  final Function delete;
 
   const NumPad({
     Key? key,
     this.buttonSize = 70,
     this.buttonColor = Colors.white,
     this.iconColor = Colors.black,
-    required this.delete,
     required this.controller,
   }) : super(key: key);
 

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:task2/secound_page.dart';
 
-class contact_page_buttens extends StatelessWidget {
-  const contact_page_buttens({
+class ContactPageButtens extends StatelessWidget {
+  const ContactPageButtens({
     Key? key,
   }) : super(key: key);
 
@@ -31,7 +32,12 @@ class contact_page_buttens extends StatelessWidget {
                 child: IconButton(
                     color: Colors.black,
                     icon: Icon(Icons.people_outline, size: 30),
-                    onPressed: () {}),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SecondPage()),
+                      );
+                    }),
               ),
               Expanded(
                 flex: 1,

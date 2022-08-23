@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:task2/secound_page.dart';
 
+import 'add_contact_model.dart';
+
 class contacts extends StatelessWidget {
   const contacts({
     Key? key,
@@ -14,7 +16,7 @@ class contacts extends StatelessWidget {
     return Column(
         children: [
           Padding(
-            padding: const EdgeInsets.fromLTRB(20, 120, 5, 0),
+            padding: const EdgeInsets.fromLTRB(20, 110, 5, 0),
             child: Container(
               height: 50,
               child: Row(
@@ -40,7 +42,7 @@ class contacts extends StatelessWidget {
           Expanded(
             child: ListView(
                 children:
-                widget.mylist.map((e) => Container(
+                Person.contacts.map((e) => Container(
                     color:Colors.white,
                     height: 90,
                     width: double.maxFinite,
@@ -63,8 +65,8 @@ class contacts extends StatelessWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text('Sura R. Atta',style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
-                                Text(e,style: TextStyle(fontSize: 20),),
+                                Text(e.name,style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
+                                Text(e.phone_number,style: TextStyle(fontSize: 20),),
                               ],
                             ),
                           ),

@@ -8,8 +8,7 @@ import 'main.dart';
 
   class SecondPage extends StatefulWidget {
 
-  List<String> mylist;
-  SecondPage( this.mylist, {Key? key}) : super(key: key);
+  SecondPage( {Key? key}) : super(key: key);
 
   @override
   State<SecondPage> createState() => _SecondPageState();
@@ -18,7 +17,6 @@ import 'main.dart';
 class _SecondPageState extends State<SecondPage> {
   @override
   Widget build(BuildContext context) {
-    print(widget.mylist);
     return
       Scaffold(
           extendBodyBehindAppBar: true,
@@ -44,8 +42,7 @@ class _SecondPageState extends State<SecondPage> {
           body: Stack(
             children:[
               contacts(widget: widget),
-              contact_page_buttens()
-
+              ContactPageButtens()
             ]
           )
       );
